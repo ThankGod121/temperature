@@ -1,0 +1,340 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+ 
+/*navigationbarsection*/
+
+
+.firstnav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px ;
+    background-color:rgb(5, 149, 82) ;
+    padding-top: 10px;
+    color: white;
+    font-size: 20px;
+}
+.firstnav img{
+    height: 5vh;
+   margin: auto;
+    
+}
+.firstnav h1{
+    text-transform: uppercase;
+   margin: 5px;
+}
+.firstnav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 8px;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.firstnav ul li::after{
+    content: '';
+    background-color: red;
+    height: 2px;
+    display: block;
+    width: 0;
+    transition: 1s;
+    margin: auto;
+}
+.firstnav ul li:hover::after{
+    width: 100%;
+}
+.firstnav ul li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    
+}
+.firstnav ul button{
+    padding: 7px;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+}
+.firstnav ul button:hover{
+    background-color: rgb(226, 221, 221);
+    padding: 9px;   
+}
+
+.firstnav button a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
+
+/*herosection*/
+
+
+.hero{
+    display: flex;
+    background-color:rgb(3, 162, 87);
+    height: 70vh;
+    justify-content: space-between; 
+    position: relative;
+}
+.herocontent{
+    color: white;
+    width: 50%;
+    margin-top: 50px;
+    text-align: center;
+}
+.herocontent h1{
+    font-size: 30px;
+    text-transform: capitalize;
+    font-style: italic; 
+    transition: 1s; 
+}
+.herocontent p{
+    margin-top: 20px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.herocontent button{
+    padding: 10px;
+    margin-top: 20px;
+}
+.herocontent button a{
+    text-decoration: none;
+    font-size: 20px;
+    text-transform:uppercase ;
+    color: black;
+
+}
+.herocontent button:hover{
+    background-color: rgb(226, 221, 221) ;
+    border: solid  rgb(240, 225, 225) ;    
+}
+/*backgroundimagesection*/
+
+
+.imagetransition{
+    width: 100%;
+    background-image: url(../img/agric\ background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    animation-name: imagechanger;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-delay: 3s;
+    border-radius: 70% 0 0; 
+    
+}
+@keyframes imagechanger {
+    10%{
+        background-image: url(../img/agric.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    20%{
+        background-image: url(../img/home1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    30%{
+        background-image: url(../img/home2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+}
+
+/*mainsection*/
+
+.firstcontainer{
+    display: flex;
+    width: 100%;
+    margin:auto;
+    align-items: center;
+    background-color: rgb(238, 231, 231);  
+    gap: 80px; 
+    height: 400px;
+}
+.firstcontainer img{
+    width: 100%;
+    height: 300px;
+    padding-left: 30%;
+}
+.heading{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 32px;
+    background-color: rgb(238, 231, 231);
+    padding-top: 20px;
+}
+.content{
+    width: 70%;
+}
+.content p{
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: justify;
+    padding-right: 70px;
+}
+.content button{
+    margin-top:10px;
+    padding: 15px;
+    background-color: #35a535;
+    border: none;
+}
+.content button a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    text-transform: capitalize;
+}
+.heading2{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.secondcontainer{
+    display: flex;
+    width: 80%;
+   margin: auto;
+    gap: 20px;
+    text-align: center;
+    padding-top: 20px; 
+    height: 480px; 
+}
+.box{
+    text-transform: capitalize;
+    background-color: whitesmoke;
+    padding: 20px;
+    width: 100%;
+}
+
+
+.secondcontainer img{
+    width: 70%;
+    height: 300px;
+    border-radius: 10px 10px;
+
+}
+
+
+.heading3{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+.heading3 h4::before{
+    content: "[";
+    color: orange;
+}
+
+.heading3 h4::after{
+    content: "]";
+    color: orange;
+}
+.testimonies{
+    display: flex;
+    width: 100%;
+}
+
+.testimonies img{
+    border-radius: 100%;
+    height: 13vh;
+    width: 50%;    
+}
+
+.testimages{
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+}
+.testimages a{
+    text-decoration: none;
+}
+/*watermarksection*/
+
+.watermark{
+    position: fixed;
+    top:5cm;
+    right: 8cm;
+    z-index: -1;
+    color: rgba(0,0,0, 0.1);
+    transform: rotate(-45deg);
+    text-transform: capitalize;
+    font-size: 100px;
+    align-content: center;
+    
+    
+}
+.fourthsec{
+    margin-top: 40px;
+}
+.fourth{
+    text-align: center;
+    text-transform: capitalize;
+}
+.fourthcontainer{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 10px;
+}
+.fourthcontainer img{
+    width: 50%;
+    margin-top: 50px;
+    height: 100px;
+}
+
+/*footersection*/
+
+
+
+footer{
+    background-color: black;
+    margin-top: 50px;
+    padding: 50px ;
+    
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 30px;
+
+}
+.footer ul li a{
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+}
+.footer p{
+    color: #228b22;
+    margin-top: 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.input{
+    color: white;
+    padding-top: 20px;
+}
+.input,.news h4{
+    color:#228b22;
+    font-size: 20px;    
+}
+.input button, input{
+    padding: 10px;
+    margin-top: 20px;
+}
+.input button a{
+    text-decoration: none;
+}
+.location{
+    color: white;
+}
+
+@media  and ( max width:500px)
+ { 
+}
